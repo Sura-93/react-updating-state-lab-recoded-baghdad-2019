@@ -1,11 +1,11 @@
 // Code YouTubeDebugger Component Here
 import React, { Component } from 'react';
 class YouTubeDebugger extends Component {
-    state = { 
+    state = {
      errors: [],
      user:null,
      settings: {
-         bitrate: 8, 
+         bitrate: 8,
          video: {
              resolution: '1080p'
          },
@@ -26,19 +26,19 @@ class YouTubeDebugger extends Component {
             settings : {
                 ...this.state.settings, video:{
                     resolution:'720p'
-                } 
+                }
             }
         })
      }
-     
-    render() { 
-        return ( 
 
-        <button className="bitrate" onClick={this.ChangeBitrate}> {this.state.settings.bitrate}</button>
-            <button className="resolution" onClick={this.ChangeResolution}>{this.state.settings.video.resolution} </button>
-
+    render() {
+        return (
+<div>
+          <button className="bitrate" onClick={this.ChangeBitrate}>{this.state.settings.bitrate}</button>
+                  <button className="resolution" onClick={this.ChangeResolution}>{this.state.settings.video.resolution}</button>
+</div>
          )
     }
 }
- 
+
 export default YouTubeDebugger;
